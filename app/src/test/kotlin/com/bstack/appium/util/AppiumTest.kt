@@ -27,13 +27,13 @@ open class AppiumTest {
     os = OS.valueOf(System.getProperty("platform", OS.ANDROID.name))
     val capabilities = DesiredCapabilities()
     val userDir = System.getProperty("user.dir")
-    val serverAddress = URL("https://sanketmali4:Nt7WxbXzjUzT8kfpbEKC@hub-cloud.browserstack.com/wd/hub")
+    val serverAddress = URL("https://<BROWSERSTACK-USERNAME>:<ACCESSKEY>@hub-cloud.browserstack.com/wd/hub")
     capabilities.setCapability("device", "Samsung Galaxy S8 Plus")
     capabilities.setCapability("os_version", "7.0")
     capabilities.setCapability("project", "My First Project")
     capabilities.setCapability("build", "My First Build")
     capabilities.setCapability("name", "Bstack-[Java] Sample Test")
-    capabilities.setCapability("app", "bs://7003a9d93e9faa78f00fa1d9d2714f3d602300dc")
+    capabilities.setCapability("app", "bs://<APP ID>")
 
     driver = AndroidDriver(serverAddress, capabilities)
 
